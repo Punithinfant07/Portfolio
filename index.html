@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punith Infant D - Web Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Loading Portfolio...</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo" data-aos="fade-right">
+                    <div class="logo-circle">
+                        <span>P</span>
+                        <div class="logo-ring"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Punith Infant D</h1>
+                        <span class="logo-subtitle">Web Developer</span>
+                    </div>
+                </div>
+                
+                <nav class="nav" data-aos="fade-down">
+                    <a href="#home" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#about" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    <a href="#skills" class="nav-link">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#projects" class="nav-link">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Projects</span>
+                    </a>
+                    <a href="#experience" class="nav-link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Experience</span>
+                    </a>
+                    <a href="#contact" class="nav-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </nav>
+                
+                <div class="header-actions" data-aos="fade-left">
+                    <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="resume-btn" onclick="downloadResume()">
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                        <div class="btn-shine"></div>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right">
+                    <div class="hero-greeting">
+                        <span class="greeting-text">Hello, I'm</span>
+                        <div class="wave" role="img" aria-label="Waving hand emoji">👋</div>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="name-highlight">Punith Infant D</span>
+                        <div class="title-underline"></div>
+                    </h1>
+                    <div class="hero-roles">
+                        <span class="role-prefix">I'm a</span>
+                        <div class="typing-container">
+                            <span id="typing-text" class="typing-text" aria-live="polite"></span>
+                            <span class="cursor" aria-hidden="true">|</span>
+                        </div>
+                    </div>
+                    <p class="hero-description">
+                        Dedicated Web Developer with comprehensive experience in front-end technologies 
+                        and full-stack development. Passionate about creating innovative web solutions 
+                        and enhancing user experiences with modern technologies.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Location</span>
+                                <span class="stat-value">Tiruvannamalai, TN</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Age</span>
+                                <span class="stat-value">20 Years</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-label">Education</span>
+                                <span class="stat-value">CS Graduate</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                            <i class="fas fa-envelope"></i>
+                            <span>Get In Touch</span>
+                            <div class="btn-ripple"></div>
+                        </button>
+                        <button class="btn btn-outline" onclick="window.open('https://github.com/punithinfant', '_blank')">
+                            <i class="fab fa-github"></i>
+                            <span>View GitHub</span>
+                            <div class="btn-ripple"></div>
+                        </button>
+                        <button class="btn btn-glass" onclick="scrollToSection('projects')">
+                            <i class="fas fa-rocket"></i>
+                            <span>My Work</span>
+                            <div class="btn-ripple"></div>
+                        </button>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/punithinfant" target="_blank" class="social-link github" title="GitHub" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com/in/punith-infant-aa2928280" target="_blank" class="social-link linkedin" title="LinkedIn" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="social-tooltip">LinkedIn</span>
+                        </a>
+                        <a href="mailto:punithinfant5@gmail.com" class="social-link email" title="Email" aria-label="Email Address">
+                            <i class="fas fa-envelope"></i>
+                            <span class="social-tooltip">Email</span>
+                        </a>
+                        <a href="tel:+919345033312" class="social-link phone" title="Phone" aria-label="Phone Number">
+                            <i class="fas fa-phone"></i>
+                            <span class="social-tooltip">Phone</span>
+                        </a>
+                        <a href="https://wa.me/919345033312" target="_blank" class="social-link whatsapp" title="WhatsApp" aria-label="WhatsApp Chat">
+                            <i class="fab fa-whatsapp"></i>
+                            <span class="social-tooltip">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image" data-aos="fade-left">
+                    <div class="image-container">
+                        <div class="image-frame">
+                            <img src="file:///C:/Users/Windows/Downloads/Portfolio/public/infant.png" alt="Punith Infant D" id="profile-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon" style="--delay: 0s" aria-hidden="true">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 1s" aria-hidden="true">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 2s" aria-hidden="true">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="floating-icon" style="--delay: 3s" aria-hidden="true">
+                                <i class="fab fa-css3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" onclick="scrollToSection('about')" role="button" aria-label="Scroll down to About section">
+            <div class="scroll-text">Scroll Down</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-user"></i>
+                    <span>About Me</span>
+                </div>
+                <h2 class="section-title">
+                    Know More <span class="highlight">About Me</span>
+                </h2>
+                <p class="section-subtitle">
+                    Computer Science graduate currently pursuing Advanced Full Stack Development
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <i class="fas fa-quote-left"></i>
+                            <h3>My Journey</h3>
+                        </div>
+                        <p>
+                            Dedicated Web Developer with comprehensive experience in front-end technologies 
+                            and full-stack development. Demonstrated expertise in HTML, CSS, JavaScript, 
+                            and PHP through practical application at Fantasy Solution.
+                        </p>
+                        <p>
+                            Proven track record of enhancing user experience through innovative web solutions 
+                            and collaborative development practices. I am a Computer Science graduate 
+                            currently pursuing Advanced Full Stack Development.
+                        </p>
+                        
+                        <div class="achievement-stats">
+                            <div class="achievement-item">
+                                <div class="achievement-number" data-count="1">0</div>
+                                <div class="achievement-label">Years Experience</div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-number" data-count="15">0</div>
+                                <div class="achievement-label">Projects Completed</div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-number" data-count="100">0</div>
+                                <div class="achievement-label">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-actions">
+                            <button class="btn btn-primary" onclick="downloadResume()">
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </button>
+                            <button class="btn btn-outline" onclick="scrollToSection('contact')">
+                                <i class="fas fa-phone"></i>
+                                <span>Let's Talk</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-cards" data-aos="fade-left">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Frontend Development</h3>
+                            <p>Creating responsive and interactive user interfaces using modern frameworks</p>
+                            <div class="service-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>React.js</span>
+                            </div>
+                        </div>
+                        <div class="service-hover"></div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Backend Development</h3>
+                            <p>Building robust server-side applications and database management</p>
+                            <div class="service-tech">
+                                <span>Node.js</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                        <div class="service-hover"></div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Responsive Design</h3>
+                            <p>Ensuring optimal user experience across all devices and screen sizes</p>
+                            <div class="service-tech">
+                                <span>Mobile-First</span>
+                                <span>Bootstrap</span>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
+                        <div class="service-hover"></div>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>E-commerce Solutions</h3>
+                            <p>Developing complete online shopping platforms with payment integration</p>
+                            <div class="service-tech">
+                                <span>Payment Gateway</span>
+                                <span>Cart System</span>
+                                <span>Admin Panel</span>
+                            </div>
+                        </div>
+                        <div class="service-hover"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-code"></i>
+                    <span>Technical Skills</span>
+                </div>
+                <h2 class="section-title">
+                    My <span class="highlight">Expertise</span>
+                </h2>
+                <p class="section-subtitle">
+                    Technologies and tools I work with professionally
+                </p>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SQL</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Technologies</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Bootstrap</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React.js</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h3>Tools & Specializations</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git/GitHub</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Chrome DevTools</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">E-commerce</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">UI/UX</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-icons" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tech-icon" title="HTML5" aria-label="HTML5 icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="tech-icon" title="CSS3" aria-label="CSS3 icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="tech-icon" title="JavaScript" aria-label="JavaScript icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="tech-icon" title="React" aria-label="React icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="tech-icon" title="Node.js" aria-label="Node.js icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="tech-icon" title="PHP" aria-label="PHP icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <div class="tech-icon" title="Git" aria-label="Git icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <div class="tech-icon" title="GitHub" aria-label="GitHub icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-folder-open"></i>
+                    <span>Portfolio</span>
+                </div>
+                <h2 class="section-title">
+                    My Recent <span class="highlight">Projects</span>
+                </h2>
+                <p class="section-subtitle">
+                    Featured work showcasing my technical skills and GitHub contributions
+                </p>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Projects</button>
+                    <button class="filter-btn" data-filter="frontend" aria-pressed="false">Frontend</button>
+                    <button class="filter-btn" data-filter="fullstack" aria-pressed="false">Full Stack</button>
+                    <button class="filter-btn" data-filter="react" aria-pressed="false">React.js</button>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="frontend" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=250&fit=crop" alt="Personal Finance Management System" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/finance-manager', '_blank')" title="View Code" aria-label="View Finance Manager Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('finance')" title="View Details" aria-label="View Finance Manager Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View Finance Manager Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Frontend</div>
+                        <h3 class="project-title">Personal Finance Management System</h3>
+                        <p class="project-description">
+                            Developed comprehensive web-based financial management application for tracking income and expenses.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Local Storage</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>4.8</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="react" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop" alt="React Task Manager" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/react-todo-app', '_blank')" title="View Code" aria-label="View React Task Manager Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('react-todo')" title="View Details" aria-label="View React Task Manager Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View React Task Manager Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">React.js</div>
+                        <h3 class="project-title">React Task Manager</h3>
+                        <p class="project-description">
+                            Modern todo application built with React.js featuring CRUD operations, local storage, and responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Hooks</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>4.9</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop" alt="E-commerce Website" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/ecommerce-website', '_blank')" title="View Code" aria-label="View E-commerce Website Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('ecommerce')" title="View Details" aria-label="View E-commerce Website Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View E-commerce Website Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Full Stack</div>
+                        <h3 class="project-title">E-commerce Website</h3>
+                        <p class="project-description">
+                            Complete e-commerce solution with product catalog, shopping cart, user authentication, and payment integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>4.7</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="frontend" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop" alt="Weather Forecast App" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/weather-app', '_blank')" title="View Code" aria-label="View Weather Forecast App Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('weather')" title="View Details" aria-label="View Weather Forecast App Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View Weather Forecast App Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Frontend</div>
+                        <h3 class="project-title">Weather Forecast App</h3>
+                        <p class="project-description">
+                            Responsive weather application with API integration, location-based forecasts, and beautiful UI design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>4.6</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="frontend" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=250&fit=crop" alt="Personal Portfolio" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/portfolio', '_blank')" title="View Code" aria-label="View Personal Portfolio Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('portfolio')" title="View Details" aria-label="View Personal Portfolio Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View Personal Portfolio Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Frontend</div>
+                        <h3 class="project-title">Personal Portfolio</h3>
+                        <p class="project-description">
+                            This responsive portfolio website showcasing my projects, skills, and professional experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>5.0</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="fullstack" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img data-src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=250&fit=crop" alt="Learning Management System" class="lazy">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <button class="project-link" onclick="window.open('https://github.com/punithinfant/lms-platform', '_blank')" title="View Code" aria-label="View Learning Management System Code on GitHub">
+                                    <i class="fab fa-github"></i>
+                                </button>
+                                <button class="project-link" onclick="openProjectModal('lms')" title="View Details" aria-label="View Learning Management System Details">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="project-link" onclick="window.open('#', '_blank')" title="Live Demo" aria-label="View Learning Management System Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Full Stack</div>
+                        <h3 class="project-title">Learning Management System</h3>
+                        <p class="project-description">
+                            Educational platform with course management, user authentication, progress tracking, and admin dashboard.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">jQuery</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-star" aria-hidden="true"></i>
+                                <span>4.8</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                                <span>10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Stats -->
+            <div class="github-section" data-aos="fade-up">
+                <div class="github-header">
+                    <h3>GitHub Activity</h3>
+                    <p>My coding journey and contributions</p>
+                </div>
+                <div class="github-stats">
+                    <div class="github-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">Public Repositories</div>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-commit"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-count="200">0</div>
+                            <div class="stat-label">Commits This Year</div>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-count="8">0</div>
+                            <div class="stat-label">Languages Used</div>
+                        </div>
+                    </div>
+                    <div class="github-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-count="25">0</div>
+                            <div class="stat-label">Stars Earned</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="github-actions">
+                    <button class="btn btn-primary" onclick="window.open('https://github.com/punithinfant', '_blank')">
+                        <i class="fab fa-github"></i>
+                        <span>Follow on GitHub</span>
+                    </button>
+                    <button class="btn btn-outline" onclick="window.open('https://github.com/punithinfant?tab=repositories', '_blank')">
+                        <i class="fas fa-folder-open"></i>
+                        <span>View All Repositories</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </div>
+                <h2 class="section-title">
+                    My <span class="highlight">Journey</span>
+                </h2>
+                <p class="section-subtitle">
+                    My professional experience and educational background
+                </p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <!-- Experience Item 1 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Web Development Intern</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Fantasy Solution, Trichy, Tamil Nadu</span>
+                                    <span class="duration">2024</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Developed dynamic web pages using HTML5, CSS3, and PHP, improving user engagement</li>
+                                    <li>Collaborated with development teams to optimize website layouts and user experience</li>
+                                    <li>Gained comprehensive understanding of professional web development workflows</li>
+                                    <li>Participated in code reviews and debugging sessions for quality assurance</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">HTML5</span>
+                                <span class="skill-tag">CSS3</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 1 -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Bachelor of Science in Computer Science</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">St. Joseph's College, Trichy, Tamil Nadu</span>
+                                    <span class="duration">Completed April 2025</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p>Completed comprehensive computer science program with focus on:</p>
+                                <ul>
+                                    <li>Data Structures and Algorithms</li>
+                                    <li>Database Management Systems</li>
+                                    <li>Software Engineering Principles</li>
+                                    <li>Web Development Technologies</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Data Structures</span>
+                                <span class="skill-tag">Algorithms</span>
+                                <span class="skill-tag">DBMS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 1 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Full Stack Developer Course</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Besant Technologies, Bangalore</span>
+                                    <span class="duration">Currently Pursuing</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p>Advanced training in modern web development frameworks:</p>
+                                <ul>
+                                    <li>Advanced React.js and Node.js development</li>
+                                    <li>Modern JavaScript frameworks and libraries</li>
+                                    <li>Database design and optimization</li>
+                                    <li>Industry best practices and deployment</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">React.js</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Express.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certification Item 2 -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Basic Full Stack Development</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">Simplilearn</span>
+                                    <span class="duration">Completed</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p>Comprehensive training in front-end and back-end technologies.</p>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Higher Secondary Certificate (Grade XII)</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">St. Mary's Boys Higher Secondary School</span>
+                                    <span class="duration">May 2022</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p>Science stream with Mathematics and Computer Science specialization.</p>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Mathematics</span>
+                                <span class="skill-tag">Computer Science</span>
+                                <span class="skill-tag">Physics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 3 -->
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-marker">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h3>Secondary School Certificate (Grade X)</h3>
+                                <div class="timeline-meta">
+                                    <span class="company">St. Mary's Boys Higher Secondary School</span>
+                                    <span class="duration">March 2020</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p>Completed secondary education with a strong foundation in core subjects.</p>
+                            </div>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">Science</span>
+                                <span class="skill-tag">Mathematics</span>
+                                <span class="skill-tag">Social Studies</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="competencies-section" data-aos="fade-up">
+                <h3>Core Competencies</h3>
+                <div class="competencies-grid">
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <span>Problem-Solving & Analysis</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <span>Rapid Technology Learning</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <span>Team Collaboration</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <span>Technical Communication</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <span>Agile Development</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>Quality Assurance</span>
+                    </div>
+                    <div class="competency-item">
+                        <div class="competency-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <span>Project Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </div>
+                <h2 class="section-title">
+                    Let's Work <span class="highlight">Together</span>
+                </h2>
+                <p class="section-subtitle">
+                    Ready to discuss your next project? Let's create something amazing together!
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3>Get in Touch</h3>
+                        <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:punithinfant5@gmail.com">punithinfant5@gmail.com</a>
+                                </div>
+                                <button class="method-action" onclick="window.location.href='mailto:punithinfant5@gmail.com'" aria-label="Send email">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+919345033312">+91 93450 33312</a>
+                                </div>
+                                <button class="method-action" onclick="window.location.href='tel:+919345033312'" aria-label="Call phone number">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <span>Tiruvannamalai, Tamil Nadu 606754</span>
+                                </div>
+                                <button class="method-action" onclick="window.open('https://maps.google.com/?q=Tiruvannamalai,Tamil Nadu 606754', '_blank')" aria-label="View location on map">
+                                    <i class="fas fa-map"></i>
+                                </button>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/punith-infant-aa2928280" target="_blank">Connect with me</a>
+                                </div>
+                                <button class="method-action" onclick="window.open('https://linkedin.com/in/punith-infant-aa2928280', '_blank')" aria-label="View LinkedIn profile">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-actions">
+                            <button class="btn btn-primary" onclick="window.open('https://wa.me/919345033312', '_blank')">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </button>
+                            <button class="btn btn-outline" onclick="downloadResume()">
+                                <i class="fas fa-download"></i>
+                                <span>Download CV</span>
+                            </button>
+                        </div>
+                        
+                        <div class="languages-info">
+                            <h4>Languages</h4>
+                            <div class="languages">
+                                <div class="language">
+                                    <span class="language-name">Tamil</span>
+                                    <span class="language-level native">Native</span>
+                                </div>
+                                <div class="language">
+                                    <span class="language-name">English</span>
+                                    <span class="language-level professional">Professional</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container" data-aos="fade-left">
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <h3>Send Message</h3>
+                            <p>Let's discuss your project requirements</p>
+                        </div>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required aria-required="true">
+                                    <div class="form-focus"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required aria-required="true">
+                                    <div class="form-focus"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required aria-required="true">
+                                <div class="form-focus"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                                <div class="form-focus"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required aria-required="true">
+                                    <option value="">Select a subject</option>
+                                    <option value="web-development">Web Development Project</option>
+                                    <option value="job-opportunity">Job Opportunity</option>
+                                    <option value="collaboration">Collaboration</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="form-focus"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="budget">Project Budget (Optional)</label>
+                                <select id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-10k">Under ₹10,000</option>
+                                    <option value="10k-25k">₹10,000 - ₹25,000</option>
+                                    <option value="25k-50k">₹25,000 - ₹50,000</option>
+                                    <option value="50k-100k">₹50,000 - ₹1,00,000</option>
+                                    <option value="above-100k">Above ₹1,00,000</option>
+                                </select>
+                                <div class="form-focus"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project requirements, timeline, and any specific details..." aria-required="true"></textarea>
+                                <div class="form-focus"></div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to newsletter for web development tips and updates
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                                <div class="btn-ripple"></div>
+                            </button>
+                        </form>
+                        
+                        <div class="form-footer">
+                            <p>
+                                <i class="fas fa-shield-alt"></i>
+                                Your information is secure and will never be shared with third parties.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand" data-aos="fade-up">
+                    <div class="brand-logo">
+                        <div class="logo-circle">
+                            <span>P</span>
+                            <div class="logo-ring"></div>
+                        </div>
+                        <div class="brand-info">
+                            <h3>Punith Infant D</h3>
+                            <p>Web Developer</p>
+                        </div>
+                    </div>
+                    <p class="brand-description">
+                        Passionate about creating innovative web solutions and bringing ideas to life through code.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/punithinfant" target="_blank" class="social-link" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/punith-infant-aa2928280" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:punithinfant5@gmail.com" class="social-link" aria-label="Email Address">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919345033312" class="social-link" aria-label="Phone Number">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="https://wa.me/919345033312" target="_blank" class="social-link" aria-label="WhatsApp Chat">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links" data-aos="fade-up" data-aos-delay="100">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#projects">Web Development</a></li>
+                            <li><a href="#projects">Frontend Design</a></li>
+                            <li><a href="#projects">Backend Development</a></li>
+                            <li><a href="#projects">E-commerce Solutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Contact Info</h4>
+                        <ul>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:punithinfant5@gmail.com">punithinfant5@gmail.com</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+919345033312">+91 93450 33312</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Tiruvannamalai, Tamil Nadu</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="200">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        © 2024 Punith Infant D. All rights reserved. 
+                        <span class="heart">Made with <i class="fas fa-heart"></i> in India</span>
+                    </p>
+                    <div class="footer-actions">
+                        <button class="scroll-top" id="scrollTop" title="Back to top" aria-label="Scroll to top">
+                            <i class="fas fa-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Title</h3>
+                <button class="modal-close" onclick="closeProjectModal()" aria-label="Close project details modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-content">
+            <div class="toast-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="toast-message">
+                <span id="toastMessage">Message sent successfully!</span>
+            </div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
